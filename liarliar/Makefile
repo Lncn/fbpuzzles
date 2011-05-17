@@ -2,7 +2,7 @@
 # By: Lincoln Simmons
 # Date: March 6, 2011
 
-make : liarliar.c
-	gcc -o liarliar liarliar.c
+liarliar : liarliar.c Makefile
+	$(CC) -std=gnu99 -O2 -o $@ $< -1m
 clean : 
 	rm liarliar
