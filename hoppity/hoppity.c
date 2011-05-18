@@ -8,15 +8,19 @@
 
 int main (int argc, char *argv[])
 {
-	int iter, input = atoi(argv[1]);
+	int ii, input;
 
-	for(iter = 1; iter <= input; iter++)
+	if (argc <= 1) return 0;
+
+	input = atoi(argv[1]);
+
+	for(ii = 1; ii <= input; ii++)
 	{
-		if (iter % 3 == 0 && iter % 5 == 0)
+		if (ii % 3 == 0 && ii % 5 == 0)
 			printf("Hop\n");
-		else if (iter % 3 == 0)
+		else if (ii % 3 == 0)
 			printf("Hoppity\n");
-		else if (iter % 5 == 0)
+		else if (ii % 5 == 0)
 			printf("Hophop\n");
 	}
 
